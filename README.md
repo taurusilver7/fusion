@@ -22,7 +22,7 @@ Modify the main layout to fit `Seachbar` into the body, parallel to children com
 
 Create Searchbar & SearchbarForm components for extensive search results.
 
-Create a RapidApi to get access to the Authorized API key to link with the application
+Create a RapidApi to get access to the Authorized API key to link with the application. Create a type for API response based on the reference in the website.
 
 ## Deploy on Vercel
 
