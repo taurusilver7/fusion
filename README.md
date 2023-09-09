@@ -16,9 +16,13 @@ npm run dev
 
 ## Build
 
-Refactor the starter template to suit `Fusion`. Modify the main layout to fit `Seachbar` into the body, parallel to children components.
+Refactor the starter template to suit `Fusion`. Add the main background in the layout for the application.
 
-Add the main background in the layout for the application.
+Modify the main layout to fit `Seachbar` into the body, parallel to children components.
+
+Create Searchbar & SearchbarForm components for extensive search results.
+
+Create a RapidApi to get access to the Authorized API key to link with the application
 
 ## Deploy on Vercel
 
