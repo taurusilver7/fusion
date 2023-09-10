@@ -1,6 +1,8 @@
 # Fusion
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A responsive soccer stats, teams info application powered by Next.JS 13, Typescript, Tailwindcss.
+
+The Application uses API-Football to request stats required to populate the application.
 
 ## Available Scripts
 
@@ -22,7 +24,11 @@ Modify the main layout to fit `Seachbar` into the body, parallel to children com
 
 Create Searchbar & SearchbarForm components for extensive search results.
 
-Create a RapidApi to get access to the Authorized API key to link with the application. Create a type for API response based on the reference in the website.
+Create a RapidApi to get access to the Authorized API key to link with the application. Create multiple types for API response based on the reference in the website.
+
+To process the response, create a utility function `getStandings`. CUstomize the request options with a revalidate period of 24 hours.
+
+The nextjs revalidates the fetched data at specific intervals. The server will cache the data for 24 hours & feed the application with cached data when many requests are made.
 
 ## Deploy on Vercel
 
