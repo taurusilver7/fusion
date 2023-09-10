@@ -28,7 +28,9 @@ Create a RapidApi to get access to the Authorized API key to link with the appli
 
 To process the response, create a utility function `getStandings`. CUstomize the request options with a revalidate period of 24 hours.
 
-The nextjs revalidates the fetched data at specific intervals. The server will cache the data for 24 hours & feed the application with cached data when many requests are made.
+The nextjs revalidates the fetched data at specific intervals. The server will cache the data for 24 hours & feed the application with cached data when many requests are made. This prevents the unnecessary usage of API calls.
+
+However, the `npm run dev` command for development server will not cache the data, consuming API calls for every hot-reload/refresh. It is suggested to use a sample data while development.
 
 ## Deploy on Vercel
 
