@@ -6,8 +6,8 @@ const Searchbar = () => {
 		<div className="flex justify-center items-center p-3 w-full bg-black/40">
 			<div className="w-1/6 flex justify-center items-center text-neutral-100">
 				<a href={"/"} className="flex justify-center items-center">
-               <img src="/logo.png" alt="logo" className="w-10 object-cover rounded-full" />
-               <div className="px-2 md:block hidden font-bold text-xl">Fusion</div>
+               <img src="/logo.png" alt="logo" className="w-12 object-cover rounded-full" />
+               <div className="px-2 md:block hidden font-bold text-xl text-orange-500">Fusion</div>
             </a>
 			</div>
 
