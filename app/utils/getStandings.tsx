@@ -25,6 +25,8 @@ async function getStandings(): Promise<Standing[]> {
 			revalidate: 60 * 60 * 24,
 		},
 	};
+
+   const standings: Standing[] = []
 }
 
 export default getStandings;
