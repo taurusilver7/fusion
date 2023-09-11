@@ -32,6 +32,8 @@ The nextjs revalidates the fetched data at specific intervals. The server will c
 
 However, the `npm run dev` command for development server will not cache the data, consuming API calls for every hot-reload/refresh. It is suggested to use a sample data while development.
 
+Create a `getTeams` utility function to get teams response
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
