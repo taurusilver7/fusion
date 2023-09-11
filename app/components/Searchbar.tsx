@@ -2,6 +2,8 @@ import React from "react";
 import SearchbarForm from "./SearchbarForm";
 
 const Searchbar = () => {
+
+	
 	return (
 		<div className="flex justify-center items-center p-3 w-full bg-black/40">
 			<div className="w-1/6 flex justify-center items-center text-neutral-100">
