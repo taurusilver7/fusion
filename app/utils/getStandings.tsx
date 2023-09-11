@@ -1,6 +1,6 @@
+import "server-only";
 import { Standing } from "@/types";
 import moment from "moment";
-import React from "react";
 
 async function getStandings(): Promise<Standing[]> {
 	const currentTime = moment();
@@ -26,7 +26,32 @@ async function getStandings(): Promise<Standing[]> {
 		},
 	};
 
-   const standings: Standing[] = []
+	const standings: Standing[] = [];
+
+	const leagues = [
+		{ name: "EPL", id: 39 },
+		{ name: "La Liga", id: 140 },
+		{ name: "BundesLiga", id: 78 },
+		{ name: "Serie A", id: 135 },
+		{ name: "Liguel", id: 61 },
+	];
+
+	for (const league of leagues) {
+		let url = `https://api-football-v1.p.rapidapi.com/v3/standings?season=${year}&league=${league.id}`;
+		await fetch(url, options)
+			.then((response) => response.json())
+			.then((data) => {
+				const standing = data.response[0];
+				if (standing) {
+					standings.push(standing);
+				}
+			})
+			.catch((err) => {
+				console.error(`Error fetching ${league.name} standing ${err}`);
+			});
+	}
+
+	return standings;
 }
 
 export default getStandings;
