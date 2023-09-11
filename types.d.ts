@@ -40,4 +40,4 @@ type Games = {
 		against: number;
 	};
 };
-export {Standing}
+export { Standing, Team };
