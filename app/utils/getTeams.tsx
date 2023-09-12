@@ -1,11 +1,11 @@
 import "server-only";
 import { Standing, Team } from "@/types";
 import getStandings from "./getStandings";
-import Error from "next/error";
 
 export default async function getTeams(): Promise<Team[]> {
 	try {
 		const standings: Standing[] = await getStandings();
+		// const standings: Standing[] = getStandingsSample();
 
 		const teams: Team[] = [];
 
