@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Searchbar from "./components/searchBar/Searchbar";
+import Searchbar from "../components/searchBar/Searchbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +27,8 @@ export default function RootLayout({
 						/>
 					</div>
 
-					<div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black/10 to-black">
-						<div className="relative" />
+					<div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black/10 to-black" />
+					<div className="relative">
 						<Searchbar />
 						{children}
 					</div>
