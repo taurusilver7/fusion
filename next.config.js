@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	iamges: {
+	images: {
 		domains: [
 			"media-1.api-sports.io",
 			"media-2.api-sports.io",
