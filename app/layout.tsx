@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import Searchbar from "../components/searchBar/Searchbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Fusion",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={roboto.className}>
 				<div className="relative bg-black">
 					<div className="absolute top-0 left-0 w-full h-full">
 						<img
