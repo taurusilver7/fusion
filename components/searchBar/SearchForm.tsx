@@ -1,7 +1,8 @@
+"use client"
 import { Team } from "@/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SearchForm = ({ teamsData }: { teamsData: Team[] }) => {
 	const [searchTerm, setSearchTerm] = useState("");
