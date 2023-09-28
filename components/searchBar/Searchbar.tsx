@@ -1,10 +1,11 @@
 import React from "react";
 import getTeams from "../../utils/getTeams";
 import { Team } from "@/types";
-import SearchbarForm from "./SearchbarForm";
+import SearchForm from "./SearchForm";
 
 export default async function Searchbar() {
 	let teamsData: Team[] = await getTeams();
+	// console.log(teamsData);
 
 	return (
 		<div className="flex justify-center items-center p-3 w-full bg-black/40">
@@ -23,7 +24,7 @@ export default async function Searchbar() {
 
 			<div className="w-4/6 justify-center items-center flex">
 				{/* Search input form */}
-				{/* <SearchbarForm teamsData={teamsData} /> */}
+				<SearchForm teamsData={teamsData} />
 			</div>
 			<div className="w-1/6" />
 		</div>
