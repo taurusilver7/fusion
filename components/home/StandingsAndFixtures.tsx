@@ -162,9 +162,19 @@ const StandingsAndFixtures = ({
 					</div>
 				</div>
 			</div>
-
+			{/* Fixtures */}
 			<div className="flex justify-center items-center lg:w-2/5 pt-10 lg:pr-10 pb-10">
+				<div className="flex flex-col justify-center items-center bg-gradient-to-b from-black/40 w-full text-neutral-100 rounded-3xl h-full">
+					<div className="w-full flex flex-col justify-center items-center">
+						<div className="p-2 font-bold">
+							Upcoming Matches
+						</div>
 
+						<div className="flex flex-col w-full justify-center items-center pb-5 overflow-hidden">
+							{/* Upcoming Fixtures */}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
