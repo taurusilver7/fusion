@@ -12,7 +12,7 @@ const StandingsAndFixtures = ({
 	const [activeTab, setActiveTab] = useState(0);
 	const menuRef = useRef<HTMLDivElement>(null);
 
-	console.log(standingsData);
+	// console.log(standingsData);d
 
 	const scrollToTab = (index: number) => {
 		const container = menuRef.current;
@@ -50,12 +50,12 @@ const StandingsAndFixtures = ({
 		};
 	}, []);
 	return (
-		<div className="flex flex-col w-full max-w-7xl justify-center items-center md:p-10 bg-gradient-to-br from-red-600/75 to-red-800/20 lg:flex-row">
+		<div className="flex flex-col w-full max-w-7xl justify-center items-center md:p-10 lg:flex-row">
 			<div className="flex justify-center items-center lg:w-3/5 md:p-10 py-5">
-				<div className="flex flex-col justify-center items-center bg-gradient-to-b from-black/40 w-full text-neutral-100 rounded-3xl">
-					<div className="w-full flex flex-col items-center justify-center">
-						<div className="p-2 px-4 font-bold">STANDING</div>
-						<div className="flex justify-center w-full">
+				<div className="flex flex-col justify-center items-center bg-gradient-to-b from-black/50 w-full text-neutral-100 rounded-3xl">
+					<div className="w-full flex flex-col px-2 items-center justify-center">
+						<div className="p-2 px-4 font-bold">STANDINGS</div>
+						<div className="flex justify-center gap-0.5 w-full">
 							{menuItems.map((a, i) => (
 								<button
 									className={`w-full p-4 rounded-t-lg md:text-base font-bold text-xs ${
@@ -138,6 +138,21 @@ const StandingsAndFixtures = ({
 														{stand.goalsDiff}
 													</div>
 												</div>
+
+												<div className="w-2/12 flex justify-center items-center">
+													{stand.form?.split("").map((char, i) => (
+														<div
+															key={char + i}
+															className={`opacity-80 w-3 h-3 m-[1px] rounded-full ${
+																char === "L"
+																	? "bg-red-500"
+																	: char === "W"
+																	? "bg-green-500"
+																	: "bg-gray-500"
+															}`}
+														></div>
+													))}
+												</div>
 											</Link>
 										))}
 									</div>
@@ -148,7 +163,9 @@ const StandingsAndFixtures = ({
 				</div>
 			</div>
 
-			<div className="flex justify-center items-center lg:w-2/5 pt-10 lg:pr-10 pb-10"></div>
+			<div className="flex justify-center items-center lg:w-2/5 pt-10 lg:pr-10 pb-10">
+
+			</div>
 		</div>
 	);
 };
