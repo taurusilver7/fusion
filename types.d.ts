@@ -94,4 +94,24 @@ type Goals = {
 	away: number,
 }
 
-export { Standing, Team };
+type Score = {
+	halftime: Goals,
+	fulltime: Goals,
+	extraction: Goals,
+	penalty: Goals,
+}
+
+type Fixture = {
+	fixture: FixtureInfo,
+	league: LeagueFixture,
+	teams: Teams,
+	goals: Goals,
+	score: Score,
+}
+
+type AllFixtures = {
+	name: string,
+	fixtures: Fixture[],
+}
+
+export { Standing, Team, AllFixtures, Fixture };
