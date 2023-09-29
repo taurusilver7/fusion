@@ -34,7 +34,13 @@ However, the `npm run dev` command for development server will not cache the dat
 
 Create a `getTeams` utility function to get teams response
 
-Create a searchBar component to house the logo & the searchBarForm.
+Create a searchBar component to house the logo & the searchBarForm. Create the helper functions & events for the search input.
+
+Create a StandingsAndFixtures component to list out the match results between teams for different leagues.
+
+Create a FixtureInfo type to populate the fixture details on the mainpage. Get the fixtures params from the API-football response-samples.
+
+Create LeagueFixtures, Teams, Goals type to populate Fixtures into the main page.
 
 ## Deploy on Vercel
 
