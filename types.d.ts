@@ -40,4 +40,58 @@ type Games = {
 		against: number;
 	};
 };
+
+// Fixtures
+type FixtureInfo = {
+	id: number;
+	referee: string;
+	timezone: string;
+	date: string;
+	timestamp: number;
+	periods: {
+		first: number;
+		second: number;
+	};
+	venue: {
+		id: number;
+		name: string;
+		city: string;
+	};
+	status: {
+		long: string;
+		short: string;
+		elapsed: number;
+	};
+};
+
+type LeagueFixtures = {
+	id: number;
+	name: string;
+	country: string;
+	flag: string;
+	logo: string;
+	season: string;
+	round: string;
+};
+
+type Teams = {
+	home: {
+		id: number;
+		name: string;
+		logo: string;
+		winner: boolean;
+	};
+	away: {
+		id: number;
+		name: string;
+		logo: string;
+		winner: boolean;
+	};
+};
+
+type Goals = {
+	home: number,
+	away: number,
+}
+
 export { Standing, Team };
