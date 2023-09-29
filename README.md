@@ -40,7 +40,7 @@ Create a StandingsAndFixtures component to list out the match results between te
 
 Create a FixtureInfo type to populate the fixture details on the mainpage. Get the fixtures params from the API-football response-samples.
 
-Create LeagueFixtures, Teams, Goals type to populate Fixtures into the main page.
+Create LeagueFixtures, Teams, Goals type to populate Fixtures into the main page. Create a util function to get Fixtures from the API endpoint.
 
 ## Deploy on Vercel
 
