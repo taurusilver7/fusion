@@ -42,6 +42,7 @@ type Games = {
 };
 
 // Fixtures
+
 type FixtureInfo = {
 	id: number;
 	referee: string;
