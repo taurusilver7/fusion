@@ -52,10 +52,10 @@ async function fetchFixturesByLeague(
 
 		const fixtures: Fixture[] = data.response;
 
-		// if (fixtures === null || fixtures === undefined) {
-		// 	return [];
-		// } else {
+		// if (fixtures !== null || fixtures !== undefined) {
 		// 	return fixtures;
+		// } else {
+		// 	return [];
 		// }
 	} catch (err: any) {
 		console.log(`Error fetching ${league} fixtures in year ${year}: ${err}`);
