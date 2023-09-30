@@ -54,7 +54,7 @@ const StandingsAndFixtures = ({
 	}, []);
 	return (
 		<div className="flex flex-col w-full max-w-7xl justify-center items-center md:p-10 lg:flex-row">
-			<div className="flex justify-center items-center lg:w-3/5 md:p-10 py-5">
+			<div className="flex justify-center items-center max-md:w-full lg:w-3/5 md:p-10 py-5">
 				<div className="flex flex-col justify-center items-center bg-gradient-to-b from-black/50 w-full text-neutral-100 rounded-3xl">
 					<div className="w-full flex flex-col px-2 items-center justify-center">
 						<div className="p-2 px-4 font-bold">STANDINGS</div>
@@ -171,7 +171,7 @@ const StandingsAndFixtures = ({
 					<div className="w-full flex flex-col justify-center items-center">
 						<div className="p-2 font-bold">Upcoming Matches</div>
 
-						<div className="flex flex-col w-full justify-center items-center pb-5 overflow-hidden">
+						<div className="flex flex-col gap-2 w-full justify-center items-center pb-5 overflow-hidden">
 							{/* Upcoming Fixtures */}
 							{menuItems.map((leagueName, i) => {
 								return (

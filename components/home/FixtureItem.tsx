@@ -23,21 +23,33 @@ const FixtureItem = ({ match, index }: PageProps) => {
 				index % 2 === 0 ? "bg-black/40" : ""
 			} animated-div`}
 		>
-			<div className="w-1/3 flex flex-col justify-center items-center text-center">
+			<div className="w-1/3 flex flex-col justify-center gap-2 items-center text-center">
 				<Image
 					src={match.teams.home.logo}
 					alt="homeLogo"
 					width={70}
 					height={70}
 				/>
-            {match.teams.home.name}
+				{match.teams.home.name}
 			</div>
 
-         <div className="w-1/3 flex flex-col justify-center items-center h-full">
-            <div className="h-1/3 text-xs text-center">
-               <LocalTime fixture={match} />
-            </div>
-         </div>
+			<div className="w-1/3 flex flex-col justify-center items-center h-full">
+				<div className="h-1/3 text-xs text-center">
+					<LocalTime fixture={match} />
+				</div>
+				<div className="h-1/3 text-center text-lg pt-2">vs</div>
+				<div className="h-1/3"></div>
+			</div>
+
+			<div className="w-1/3 flex flex-col justify-center gap-2 items-center text-center">
+				<Image
+					src={match.teams.away.logo}
+					alt="homeLogo"
+					width={70}
+					height={70}
+				/>
+				{match.teams.away.name}
+			</div>
 		</Link>
 	) : null;
 };
