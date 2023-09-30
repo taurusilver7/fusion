@@ -1,12 +1,15 @@
 "use client";
-import { Standing } from "@/types";
+import { AllFixtures, Standing } from "@/types";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import FixturesByLeague from "./FixturesByLeague";
 
 const StandingsAndFixtures = ({
 	standingsData,
+	filteredFixtures,
 }: {
 	standingsData: Standing[];
+	filteredFixtures: AllFixtures[];
 }) => {
 	const menuItems = ["EPL", "La Liga", "BundesLiga", "Serie A", "Ligue 1"];
 	const [activeTab, setActiveTab] = useState(0);
@@ -166,12 +169,25 @@ const StandingsAndFixtures = ({
 			<div className="flex justify-center items-center lg:w-2/5 pt-10 lg:pr-10 pb-10">
 				<div className="flex flex-col justify-center items-center bg-gradient-to-b from-black/40 w-full text-neutral-100 rounded-3xl h-full">
 					<div className="w-full flex flex-col justify-center items-center">
-						<div className="p-2 font-bold">
-							Upcoming Matches
-						</div>
+						<div className="p-2 font-bold">Upcoming Matches</div>
 
 						<div className="flex flex-col w-full justify-center items-center pb-5 overflow-hidden">
 							{/* Upcoming Fixtures */}
+							{menuItems.map((leagueName, i) => {
+								return (
+									activeTab === i &&
+									filteredFixtures.map((league, j) => {
+										if (league.name === leagueName) {
+											return (
+												<FixturesByLeague
+													fixturesData={league.fixtures}
+													key={league.name + j}
+												/>
+											);
+										}
+									})
+								);
+							})}
 						</div>
 					</div>
 				</div>
