@@ -23,7 +23,7 @@ const LocalTime = ({ fixture }: PageProps) => {
 		setFormattedTime(formatted);
 	}, []);
 
-	return <div>{formattedTime}</div>;
+	return <div className="flex justify-center items-center text-center">{formattedTime}</div>;
 };
 
 export default LocalTime;
