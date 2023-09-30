@@ -4,6 +4,7 @@ import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import LocalTime from "../LocalTime";
 
 type PageProps = {
 	match: Fixture;
@@ -29,8 +30,14 @@ const FixtureItem = ({ match, index }: PageProps) => {
 					width={70}
 					height={70}
 				/>
+            {match.teams.home.name}
 			</div>
-			FixtureItem component
+
+         <div className="w-1/3 flex flex-col justify-center items-center h-full">
+            <div className="h-1/3 text-xs text-center">
+               <LocalTime fixture={match} />
+            </div>
+         </div>
 		</Link>
 	) : null;
 };
