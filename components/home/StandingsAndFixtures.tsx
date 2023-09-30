@@ -180,7 +180,7 @@ const StandingsAndFixtures = ({
 										if (league.name === leagueName) {
 											return (
 												<FixturesByLeague
-													fixturesData={league.fixtures}
+													fixtureData={league.fixtures}
 													key={league.name + j}
 												/>
 											);

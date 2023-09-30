@@ -7,8 +7,13 @@ type PageProps = {
 };
 
 const FixturesByLeague = ({ fixtureData }: PageProps) => {
+	// console.log(fixtureData);
 	if (fixtureData?.length > 0) {
-		return fixtureData.slice(0, 4).map((match, i) => <FixtureItem match={match} index={i} key={match.fixture.id} />);
+		return fixtureData
+			.slice(0, 4)
+			.map((match, i) => (
+				<FixtureItem match={match} index={i} key={match.fixture.id} />
+			));
 	}
 };
 
