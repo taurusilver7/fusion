@@ -42,7 +42,13 @@ Create a FixtureInfo type to populate the fixture details on the mainpage. Get t
 
 Create LeagueFixtures, Teams, Goals type to populate Fixtures into the main page. Create a util function to get Fixtures from the API endpoint.
 
-From getFixtures, filter the fixtures for five leagues in a new util function. 
+From getFixtures, filter the fixtures for five leagues in a new util function.
+
+Populate the filtered fixtures in StandingsAndFixtures through Home page. The util function is a server-only function, and can only be incorporated into client component through a server page.
+
+Populate the Standings & Fixtures in the main page. Each standing & fixture lead to either a team or a match. Create team page with [id] param to populate the team filtered through fixtures.
+
+Create a util function to get team info from Team & fixtures information from team Id, using the team id params.
 
 ## Deploy on Vercel
 
