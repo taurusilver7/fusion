@@ -42,6 +42,8 @@ Create a FixtureInfo type to populate the fixture details on the mainpage. Get t
 
 Create LeagueFixtures, Teams, Goals type to populate Fixtures into the main page. Create a util function to get Fixtures from the API endpoint.
 
+From getFixtures, filter the fixtures for five leagues in a new util function. 
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
