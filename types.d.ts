@@ -98,7 +98,7 @@ type Goals = {
 type Score = {
 	halftime: Goals,
 	fulltime: Goals,
-	extraction: Goals,
+	extratime: Goals,
 	penalty: Goals,
 }
 
