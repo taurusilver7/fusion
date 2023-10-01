@@ -42,6 +42,7 @@ async function fetchFixturesByLeague(
 			"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
 		},
 		next: {
+			// revalidate every 24 hours to avoid excess api usage.
 			revalidate: 60 * 60 * 24,
 		},
 	};
@@ -52,14 +53,14 @@ async function fetchFixturesByLeague(
 
 		const fixtures: Fixture[] = data.response;
 
-		// if (fixtures !== null || fixtures !== undefined) {
-		// 	return fixtures;
-		// } else {
-		// 	return [];
-		// }
+		if (fixtures === null || fixtures === undefined) {
+			return [];
+		} else {
+			return fixtures;
+		}
 	} catch (err: any) {
 		console.log(`Error fetching ${league} fixtures in year ${year}: ${err}`);
-		// return [];
+		throw err;
 	}
 }
 
