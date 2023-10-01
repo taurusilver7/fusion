@@ -5,7 +5,6 @@ import getStandings from "./getStandings";
 export default async function getTeams(): Promise<Team[]> {
 	try {
 		const standings: Standing[] = await getStandings();
-		// const standings: Standing[] = getStandingsSample();
 
 		const teams: Team[] = [];
 
