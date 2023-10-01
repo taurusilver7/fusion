@@ -106,7 +106,7 @@ const TeamPage = async ({ params }: PageProps) => {
 				</div>
 
 				<div className="flex flex-col md:w-2/3 justify-center items-center">
-					<Fixtures />
+					<Fixtures fixturesByTeamId={fixturesByTeamId} teamId={parseInt(params.id)} />
 				</div>
 			</div>
 		</div>
