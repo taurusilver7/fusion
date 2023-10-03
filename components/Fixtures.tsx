@@ -92,7 +92,7 @@ const Fixtures = ({ fixturesByTeamId, teamId }: PageProps) => {
 							<Link
 								href={`/match/${fixture.fixture.id}`}
 								key={fixture.fixture.id}
-								className="w-full flex-shrink-0 text-neutral-100 items-center h-30 bg-gradient-to-r from-black/90 to-black/40 hover:bg-red-800"
+								className="w-full flex-shrink-0 text-neutral-100 items-center h-30 bg-gradient-to-r from-black/90 to-black/40 hover:bg-green-800"
 							>
 								<div className="flex flex-col justify-center items-center w-3/12 text-center">
 									<Image
