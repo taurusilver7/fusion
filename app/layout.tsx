@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 import Searchbar from "../components/searchBar/Searchbar";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
@@ -21,9 +22,11 @@ export default function RootLayout({
 			<body className={roboto.className}>
 				<div className="relative bg-black">
 					<div className="absolute top-0 left-0 w-full h-full">
-						<img
+						<Image
 							src="/background.png"
 							alt="background"
+							width={1000}
+							height={1000}
 							className="h-screen w-full object-cover"
 						/>
 					</div>
